@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Order bank items</title>
+    <style type="text/css">
+        body {
+            padding: 50px;
+        }
+
+        .block {
+            float: left;
+            width: 50%;
+        }
+
+        .table, .table td {
+            border: 1px solid lightgray;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+<div class="block">
+    <h1>Available items:</h1>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="item : ${availableItems}">
+            <td th:text="${item.name}">Safe Box</td>
+            <td th:text="${item.price}">300</td>
+            <td>
+                <a th:href="@{/add(id=${item.id})}" href="order.html">Add</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div class="block">
+    <h1>Selected items:</h1>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="item : ${items}">
+            <td th:text="${item.name}">Safe Box</td>
+            <td th:text="${item.price}">300</td>
+        </tr>
+        </tbody>
+    </table>
+    <br/>
+    <a th:href="@{/order}" href="order.html">Order all items</a>
+</div>
+</body>
+</html>

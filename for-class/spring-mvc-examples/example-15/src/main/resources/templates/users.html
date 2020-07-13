@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Users list</title>
+</head>
+<body>
+
+<h1>Users list</h1>
+
+<!-- TODO: Open this file in browser and open corresponded URL. Find all differences. -->
+
+<!-- Here is an example of th:each -->
+<div th:each="user : ${users}">
+    <span>User name:&nbsp;</span>
+    <span th:text="${user.name}">Leo</span>
+
+    <!-- Here is example of th:if attribute -->
+    <span th:if="${user.name} == 'Mike'">!!!</span>
+
+    <br/>
+
+    <span>User age:&nbsp;</span>
+    <span th:text="${user.age}">12</span>
+
+    <br/>
+
+    <!-- It replaces "href" attribute in application -->
+    <!-- Then you have correct link in plain HTML file and in application -->
+    <a th:href="@{/user(id=${user.id})}" href="user.html">
+        Edit
+    </a>
+
+    <br/>
+    <br/>
+</div>
+
+</body>
+</html>

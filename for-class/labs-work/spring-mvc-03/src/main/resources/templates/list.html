@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>List of all accounts</title>
+    <style type="text/css">
+        body {
+            padding: 50px;
+        }
+
+        .accounts, .accounts td {
+            border: 1px solid lightgray;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+<h1>Accounts:</h1>
+
+<!-- TODO: place Thymeleaf attributes here -->
+<table class="accounts">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Holder</th>
+        <th>Amount</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>1</td>
+        <td>John Doe</td>
+        <td>2000</td>
+        <td>
+            <a href="edit.html">Edit</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

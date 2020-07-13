@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Sample page</title>
+</head>
+<body>
+
+<h1>Sample localized</h1>
+
+<!--
+    Here are examples how to use localized messages with Thymeleaf
+-->
+<div>
+    <span>Localized hello:&nbsp;</span>
+    <span th:text="#{localized.hello}">localized hello message</span>
+</div>
+
+<div>
+    <span>Localized hello and username:&nbsp;</span>
+    <span th:text="#{localized.hello.user('Mike')}">localized hello message</span>
+</div>
+
+</body>
+</html>

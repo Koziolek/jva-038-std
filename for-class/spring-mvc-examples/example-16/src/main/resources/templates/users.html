@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Users list</title>
+</head>
+<body>
+
+<h1>Users list</h1>
+
+<div th:each="user : ${users}">
+    <span>User name:&nbsp;</span>
+    <span th:text="${user.name}">Leo</span>
+
+    <span th:if="${user.name} == 'Mike'">!!!</span>
+
+    <br/>
+
+    <span>User age:&nbsp;</span>
+    <span th:text="${user.age}">12</span>
+
+    <br/>
+
+    <a th:href="@{/user(id=${user.id})}" href="user.html">
+        Edit
+    </a>
+
+    <br/>
+    <br/>
+</div>
+
+</body>
+</html>

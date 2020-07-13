@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Edit account</title>
+    <style type="text/css">
+        body {
+            padding: 50px;
+        }
+
+        label {
+            display: inline-block;
+            width: 100px;
+        }
+
+        input:read-only {
+            background: lightgray;
+        }
+
+        .row {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- TODO: place Thymeleaf attributes here -->
+
+<!-- Account edition -->
+<form id="edit-form" action="edit.html">
+    <h1>Account Info:</h1>
+
+    <div class="row">
+        <label for="id-input">ID:</label>
+        <input id="id-input" type="text" readonly="readonly" value="1"/>
+    </div>
+
+    <div class="row">
+        <label for="holder-input">Holder:</label>
+        <input id="holder-input" name="holder" type="text" value="John Doe"/>
+    </div>
+
+    <div class="row">
+        <label for="balance-input">Balance:</label>
+        <input id="balance-input" type="text" readonly="readonly" value="2000"/>
+    </div>
+
+    <div class="row">
+        <button type="submit">Save</button>
+    </div>
+</form>
+
+<!-- Deposit form -->
+<form id="deposit-form" action="edit.html">
+    <h1>Deposit:</h1>
+
+    <label for="deposit-input">Amount:</label>
+    <input id="deposit-input" name="amount" type="number" value="100"/>
+    <button type="submit">Deposit</button>
+</form>
+
+<!-- Withdraw -->
+<form id="withdraw-form" action="edit.html">
+    <h1>Withdraw:</h1>
+
+    <label for="withdraw-input">Amount:</label>
+    <input id="withdraw-input" name="amount" type="number" value="100"/>
+    <button type="submit">Withdraw</button>
+</form>
+
+</body>
+</html>

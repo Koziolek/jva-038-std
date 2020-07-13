@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Order view</title>
+</head>
+<body>
+
+<h1>Order Info:</h1>
+
+<div>
+    <span>ID:&nbsp;</span>
+    <span th:text="${order.id}">1</span>
+</div>
+
+<div>
+    <span>Customer:&nbsp;</span>
+    <span th:text="${order.customer}">Luxoft</span>
+</div>
+
+<div>
+    <span>Amount:&nbsp;</span>
+    <span th:text="${order.amount}">1</span>
+</div>
+
+</body>
+</html>
